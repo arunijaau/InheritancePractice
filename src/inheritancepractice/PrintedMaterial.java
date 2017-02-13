@@ -10,14 +10,26 @@ package inheritancepractice;
  * @author Aruni
  */
 public class PrintedMaterial {
-    private String name;
-    private int type;
-    private int numberOfCopies;
 
-    public PrintedMaterial(String name, int type, int numberOfCopies) {
-        this.name = name;
-        this.type = type;
-        this.numberOfCopies = 0;
+    private String name;
+    private String type;
+    private int numberOfCopiesNeeded;
+    private int copiesPrinted;
+
+    public void print() {
+        this.copiesPrinted += this.numberOfCopiesNeeded;
+    }
+
+    public int getCopiesPrinted() {
+        return copiesPrinted;
+    }
+
+    public int getNumberOfCopiesNeeded() {
+        return numberOfCopiesNeeded;
+    }
+
+    public void setNumberOfCopies(int numberOfCopies) {
+        this.numberOfCopiesNeeded = numberOfCopies;
     }
 
     public String getName() {
@@ -28,17 +40,12 @@ public class PrintedMaterial {
         this.name = name;
     }
 
-    public int getType() {
+    public String getType() {
         return type;
     }
 
-    public void setType(int type) {
+    public void setType(String type) {
         this.type = type;
     }
-    
-    public void print(){
-        this.numberOfCopies += 1;
-    }
-    
-    
+
 }

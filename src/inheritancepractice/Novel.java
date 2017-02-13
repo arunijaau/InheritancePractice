@@ -9,25 +9,26 @@ package inheritancepractice;
  *
  * @author Aruni
  */
-public class Novel extends Book{
-    private String name;
+public class Novel extends Book {
+
+    private String title;
     private int numberOfPages;
-    private boolean isRead;
+    private String author;
 
-    public Novel(String name, int type, int numberOfCopies) {
-        super(name, type, numberOfCopies);
-        this.isRead = false;
+    public void isAvailableInStock() {
+        if (this.getCopiesPrinted() >= 0) {
+            System.out.println(this + " novel has " + this.getCopiesPrinted() + " copies in the stock.");
+        } else {
+            System.out.println("No copies available in the stock.");
+        }
     }
 
-   
-    @Override
-    public String getName() {
-        return name;
+    public String getTitle() {
+        return title;
     }
 
-    @Override
-    public void setName(String name) {
-        this.name = name;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public int getNumberOfPages() {
@@ -37,10 +38,18 @@ public class Novel extends Book{
     public void setNumberOfPages(int numberOfPages) {
         this.numberOfPages = numberOfPages;
     }
-    
-    public void read(){
-        this.isRead = true;
+
+    public String getAuthor() {
+        return author;
     }
 
-    
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
+    @Override
+    public String toString() {
+        return this.title;
+    }
+
 }

@@ -9,36 +9,29 @@ package inheritancepractice;
  *
  * @author Aruni
  */
-public class Book extends PrintedMaterial{
-    private String author;
-    private String title;
-    private boolean availability;
+public class Book extends PrintedMaterial {
 
-    public Book(String name, int type, int numberOfCopies) {
-        super(name, type, numberOfCopies);
-        this.availability = false;
-    }
-    
-    
+    private int NumberOfChapters;
+    private int chapterNumber;
 
-    public String getAuthor() {
-        return author;
-        
+    public void readChapter(int chapterNumber) {
+        System.out.println("Chapter " + chapterNumber + " was read.");
     }
 
-    public void setAuthor(String author) {
-        this.author = author;
+    public int getNumberOfChapters() {
+        return NumberOfChapters;
     }
 
-    public String getTitle() {
-        return title;
+    public void setNumberOfChapters(int NumberOfChapters) {
+        this.NumberOfChapters = NumberOfChapters;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public int getChapterNumber() {
+        return chapterNumber;
     }
 
-    public boolean isAvailable(){
-        return this.availability;
+    public void setChapterNumber(int chapterNumber) {
+        this.chapterNumber = chapterNumber;
     }
+
 }
