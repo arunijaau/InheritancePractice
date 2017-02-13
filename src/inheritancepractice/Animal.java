@@ -10,5 +10,15 @@ package inheritancepractice;
  * @author Aruni
  */
 public class Animal {
+    private int lifeExpectancy;
+    private String animalClass;
+    
+    public void eat(){
+        System.out.println("Eat for being alive.");
+    }
+    
+    
+    
+    
     
 }

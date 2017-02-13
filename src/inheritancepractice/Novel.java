@@ -15,12 +15,8 @@ public class Novel extends Book {
     private int numberOfPages;
     private String author;
 
-    public void isAvailableInStock() {
-        if (this.getCopiesPrinted() >= 0) {
-            System.out.println(this + " novel has " + this.getCopiesPrinted() + " copies in the stock.");
-        } else {
-            System.out.println("No copies available in the stock.");
-        }
+    public void read(){
+        System.out.println(this + " novel was read.");
     }
 
     public String getTitle() {

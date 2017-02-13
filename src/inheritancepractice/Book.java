@@ -11,27 +11,29 @@ package inheritancepractice;
  */
 public class Book extends PrintedMaterial {
 
-    private int NumberOfChapters;
-    private int chapterNumber;
+    private int numberOfChapters;
+    private String category;
 
+    
     public void readChapter(int chapterNumber) {
         System.out.println("Chapter " + chapterNumber + " was read.");
+    
     }
 
     public int getNumberOfChapters() {
-        return NumberOfChapters;
+        return numberOfChapters;
     }
 
-    public void setNumberOfChapters(int NumberOfChapters) {
-        this.NumberOfChapters = NumberOfChapters;
+    public void setNumberOfChapters(int numberOfChapters) {
+        this.numberOfChapters = numberOfChapters;
+    }
+    
+    public String getCategory() {
+        return category;
     }
 
-    public int getChapterNumber() {
-        return chapterNumber;
-    }
-
-    public void setChapterNumber(int chapterNumber) {
-        this.chapterNumber = chapterNumber;
+    public void setCategory(String category) {
+        this.category = category;
     }
 
 }

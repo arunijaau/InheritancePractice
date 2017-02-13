@@ -13,23 +13,16 @@ public class PrintedMaterial {
 
     private String name;
     private String type;
-    private int numberOfCopiesNeeded;
     private int copiesPrinted;
 
-    public void print() {
-        this.copiesPrinted += this.numberOfCopiesNeeded;
+    public void print(int copies) {
+        if (copies > 0) {
+            this.copiesPrinted += copies;
+        }
     }
 
     public int getCopiesPrinted() {
         return copiesPrinted;
-    }
-
-    public int getNumberOfCopiesNeeded() {
-        return numberOfCopiesNeeded;
-    }
-
-    public void setNumberOfCopies(int numberOfCopies) {
-        this.numberOfCopiesNeeded = numberOfCopies;
     }
 
     public String getName() {

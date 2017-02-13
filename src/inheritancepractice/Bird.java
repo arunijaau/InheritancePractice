@@ -9,6 +9,19 @@ package inheritancepractice;
  *
  * @author Aruni
  */
-public class Bird {
+public class Bird extends Animal{
+    private String type;
+    private boolean isRare;
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
     
+    public void LayEggs(){
+        System.out.println("Laid eggs.");
+    }
 }
