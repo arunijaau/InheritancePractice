@@ -16,6 +16,22 @@ public class Animal {
     public void eat(){
         System.out.println("Eat for being alive.");
     }
+
+    public int getLifeExpectancy() {
+        return lifeExpectancy;
+    }
+
+    public void setLifeExpectancy(int lifeExpectancy) {
+        this.lifeExpectancy = lifeExpectancy;
+    }
+
+    public String getAnimalClass() {
+        return animalClass;
+    }
+
+    public void setAnimalClass(String animalClass) {
+        this.animalClass = animalClass;
+    }
     
     
     

@@ -10,6 +10,8 @@ package inheritancepractice;
  * @author Aruni
  */
 public class Bird extends Animal{
+
+    
     private String type;
     private boolean isRare;
 
@@ -23,5 +25,13 @@ public class Bird extends Animal{
     
     public void LayEggs(){
         System.out.println("Laid eggs.");
+    }
+    
+    public boolean isIsRare() {
+        return isRare;
+    }
+
+    public void setIsRare(boolean isRare) {
+        this.isRare = isRare;
     }
 }
